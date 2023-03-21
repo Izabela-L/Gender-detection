@@ -80,7 +80,9 @@ model = tf.keras.Sequential([
 ])
 ```
 Model je sekvencijalni i sastoji se od 19 slojeva.  Izmjenjuju se konvolucijski slojevi i slojevi sazimanja.
-Conv2d su konvolucijski slojevi koji izvlače značajke iz slika. Izmjenjuju se s aktivacijskim i pooling slojevima. Activation sloj primjenjuje Rectified Linear Unit funkciju na izlaz konvulcijsih slojeva. Slojevi sazimanja tj. MaxPooling2D smanjuju dimezije mapa značajki, ali čuvaju najbitnije atribute. GlobalAverage2D sloj računa srednju vrijednost svake mape značajki u zadnjem konvolucijskom sloju. Dropout sloj je sloj izbacivanja i spriječava da se model odviše prilagodi skupu za treniranje tj. overfitting. Na samom kraju imamo dva potpuno povezana sloja gdje se događaju predikcije.
+Conv2d su konvolucijski slojevi koji izvlače značajke iz slika. Izmjenjuju se s aktivacijskim i pooling slojevima. Activation sloj primjenjuje Rectified Linear Unit funkciju na izlaz konvulcijsih slojeva. Slojevi sazimanja tj. MaxPooling2D smanjuju dimezije mapa značajki, ali čuvaju najbitnije atribute. 
+
+GlobalAverage2D sloj računa srednju vrijednost svake mape značajki u zadnjem konvolucijskom sloju. Dropout sloj je sloj izbacivanja i spriječava da se model odviše prilagodi skupu za treniranje tj. overfitting. Na samom kraju imamo dva potpuno povezana sloja gdje se događaju predikcije.
 
 # Treniranje modela
 ```
@@ -128,6 +130,8 @@ model.evaluate(test_ds)
 626/626 [==============================] - 16s 26ms/step - loss: 0.0638 - accuracy: 0.9783
 [0.06383144110441208, 0.9782510995864868]
 ```
+Model ima dobre performanse na setu podataka za testiranje, s preciznošću od 97.8%. 
+
 ## Konverzija modela u tf.lite oblik za uporabu u Android aplikaciji
 ```
 converter = tf.lite.TFLiteConverter.from_keras_model(model)
