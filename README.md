@@ -1,3 +1,10 @@
+## Uvod
+
+Model prikazan u ovome repozitoriju kreiran je za korištenje u Android aplikaciji za detekciju spola. Aplikacija korisniku omogućuje prijenos slike iz galerije, ili slikanje fotoaparatom. Rezultat klasifikacije se prikaze kao postotak, koliko je model siguran prikazuje li određena slika zensku ili mušku osobu. Model je treniran u Google Colab platformi, i kod je napisan u Pythonu. Aplikacija je razvijena u Android Studio alatu i Javi. 
+
+![unnamed (1)](https://user-images.githubusercontent.com/70230257/226581214-1c83752a-df6d-4b8d-bb6e-6611c4ae84b8.jpg) ![unnamed (2)](https://user-images.githubusercontent.com/70230257/226581424-30b46e8d-f558-450f-baa8-a806ad1d0b65.jpg)
+
+
 ## Baza podataka
 
 Za učenje modela koristi se Kaggle baza podataka Gender Classification 200K Images | CelebA koja sadrži 200 tisuća slika poznatih muških i ženskih osoba. Slike su predprocesirane i podijeljene na treniranje, testiranje, validacija.
@@ -130,7 +137,7 @@ model.evaluate(test_ds)
 626/626 [==============================] - 16s 26ms/step - loss: 0.0638 - accuracy: 0.9783
 [0.06383144110441208, 0.9782510995864868]
 ```
-Kako bi dobili bolji uvid u preciznost modela i kako se nosi s podacima koje još nije vidio, potrebno je provestu evaluaciju na setu za testiranje. Model postize dobre performanse na setu podataka za testiranje, s preciznošću od 97.8%. 
+Kako bi dobili bolji uvid u preciznost modela i kako se nosi s podacima koje još nije vidio, potrebno je provesti evaluaciju na setu za testiranje. Model postize dobre performanse na setu podataka za testiranje, s preciznošću od 97.8%. 
 
 ## Konverzija modela u tf.lite oblik za uporabu u Android aplikaciji
 ```
