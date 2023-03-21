@@ -1,6 +1,8 @@
 ## Uvod
 
-Model prikazan u ovome repozitoriju kreiran je za korištenje u Android aplikaciji za detekciju spola. Aplikacija korisniku omogućuje prijenos slike iz galerije, ili slikanje fotoaparatom. Rezultat klasifikacije se prikaze kao postotak, koliko je model siguran prikazuje li određena slika zensku ili mušku osobu. Model je treniran u Google Colab platformi, i kod je napisan u Pythonu. Aplikacija je razvijena u Android Studio alatu i Javi. 
+Model prikazan u ovome repozitoriju kreiran je za korištenje u Android aplikaciji za detekciju spola. Aplikacija korisniku omogućuje prijenos slike iz galerije, ili slikanje fotoaparatom. Rezultat klasifikacije se prikaze kao postotak, koliko je model siguran prikazuje li određena slika zensku ili mušku osobu. 
+
+Model je treniran u Google Colab platformi, kod je napisan u Pythonu. Aplikacija je razvijena u Android Studio alatu i Javi. 
 
 ![unnamed (1)](https://user-images.githubusercontent.com/70230257/226581214-1c83752a-df6d-4b8d-bb6e-6611c4ae84b8.jpg) ![unnamed (2)](https://user-images.githubusercontent.com/70230257/226581424-30b46e8d-f558-450f-baa8-a806ad1d0b65.jpg)
 
