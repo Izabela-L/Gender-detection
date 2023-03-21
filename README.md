@@ -130,7 +130,7 @@ model.evaluate(test_ds)
 626/626 [==============================] - 16s 26ms/step - loss: 0.0638 - accuracy: 0.9783
 [0.06383144110441208, 0.9782510995864868]
 ```
-Model ima dobre performanse na setu podataka za testiranje, s preciznošću od 97.8%. 
+Kako bi dobili bolji uvid u preciznost modela i kako se nosi s podacima koje još nije vidio, potrebno je provestu evaluaciju na setu za testiranje. Model postize dobre performanse na setu podataka za testiranje, s preciznošću od 97.8%. 
 
 ## Konverzija modela u tf.lite oblik za uporabu u Android aplikaciji
 ```
